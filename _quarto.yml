@@ -1,0 +1,61 @@
+# https://jayrobwilliams.com/software/
+project:
+  type: website
+  pre-render: scripts/pre.py
+
+
+website:
+  title: "Garrett Shipley"
+  navbar:
+    background: "#58595B"
+    foreground: "#FFFFFF"
+    left:
+      - text: "Home"
+        file: index.qmd
+      - text: "Research"
+        file: docs/research/research.qmd
+      - text: "Teaching"
+        file: docs/teaching/teaching.qmd
+      - text: "Software"
+        file: docs/software/software.qmd
+      - text: "About"
+        file: docs/about.qmd
+    search: true
+
+  sidebar:
+    style: "docked"
+    tools: 
+      # Email
+      - icon: envelope-fill
+        href: mailto:gshiple2@vols.utk.edu
+      # Google Scholar
+      - icon: mortarboard-fill
+        href: https://scholar.google.com/citations?user=BnWtlvUAAAAJ&hl=en&inst=9897619243961157265
+      # Github
+      - icon: github
+        href: https://github.com/shipleyresearch
+      # Download CV
+      - icon: file-pdf-fill
+        href: docs/placeholder.qmd
+    
+    contents:
+      - section: "Research"
+        contents:
+          - docs/research/research.qmd
+      
+      - section: "Teaching"
+        contents:
+          - docs/teaching/teaching.qmd
+      
+      - section: "Software"
+        contents:
+          - docs/software/software.qmd
+      
+
+format:
+  html:
+    theme: lightly
+    css: styles.css
+    toc: false
+    link-external-newwindow: true
+    

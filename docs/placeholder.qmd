@@ -1,0 +1,6 @@
+---
+aliases: 
+  - "placeholder.qmd"
+---
+
+# Placeholder
