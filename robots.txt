@@ -1,1 +1,1 @@
-Sitemap: https://github.com/garth74/garth74.github.io/sitemap.xml
+Sitemap: www.garrettshipley.com/sitemap.xml
