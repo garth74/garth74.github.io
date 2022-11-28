@@ -1,56 +1,109 @@
 # https://jayrobwilliams.com/software/
 project:
   type: website
-  # pre-render: scripts/pre.py
+  execute-dir: project
+  
+  # Define the preview arguments
+  preview:
+    port: 4200
+    browser: true
+    watch-inputs: true
+    navigate: false
 
+  # Define the resources
+  resources:
+    - resources
+  
 
+# Define the main website parameters
 website:
+
   title: "Garrett Shipley"
+  description: "A description of the website"
+
+  # Define the Navigation Bar
   navbar:
+    search: true
     background: "#58595B"
     foreground: "#FFFFFF"
+
+    # Define the navigation content
     left:
       - text: "Home"
         file: index.qmd
-      - text: "Research"
-        file: docs/research/research.qmd
-      - text: "Teaching"
-        file: docs/teaching/teaching.qmd
-      - text: "Software"
-        file: docs/software/software.qmd
-      - text: "About"
-        file: docs/about.qmd
-    search: true
 
+      - text: "Research"
+        file: docs/research.qmd
+
+      - text: "Teaching"
+        file: docs/teaching.qmd
+
+      - text: "Software"
+        file: docs/software.qmd
+
+
+    # Right side navigation bar
+    # right: 
+    #       - icon: github
+    #         href: https://github.com/garth74
+    #         aria-label: GitHub
+          
+    #       - icon: mortarboard-fill
+    #         href: https://scholar.google.com/citations?user=BnWtlvUAAAAJ&hl=en&inst=9897619243961157265
+    #         aria-label: Google Scholar
+
+
+  # Define the Sidebar
   sidebar:
     style: "docked"
-    tools: 
+    collapse-level: 1
+  
+
+    # Define the Sidebar tools
+    tools:
+
       # Email
       - icon: envelope-fill
         href: mailto:gshiple2@vols.utk.edu
+
       # Google Scholar
       - icon: mortarboard-fill
         href: https://scholar.google.com/citations?user=BnWtlvUAAAAJ&hl=en&inst=9897619243961157265
+
       # Github
       - icon: github
-        href: https://github.com/shipleyresearch
+        href: https://github.com/garth74
+
       # Download CV
       - icon: file-pdf-fill
-        href: docs/placeholder.qmd
-    
+        href: https://github.com/garth74/vita/raw/main/vita.pdf
+
+
+    # Define the Sidebar content
     contents:
+      
+      # Research section
       - section: "Research"
         contents:
-          - docs/research/research.qmd
-      
+          - docs/research.qmd
+
+      # Teaching section
       - section: "Teaching"
         contents:
-          - docs/teaching/teaching.qmd
-      
+          - docs/teaching.qmd
+
+      # Software section
       - section: "Software"
         contents:
-          - docs/software/software.qmd
-      
+          - docs/software.qmd
+  
+  # Define the page footer
+  page-footer: 
+    border: false
+    center:
+      - text: "About"
+        href: docs/about.qmd
+
 
 format:
   html:
